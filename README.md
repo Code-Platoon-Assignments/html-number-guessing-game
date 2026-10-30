@@ -22,6 +22,7 @@ Your number guessing game will consist of an HTML file, CSS file, and a Javascri
 Your HTML file is already given to you with a `<nav>` element and a `<h1>` tag.
 ```html
 <!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <title>TITLE</title>
@@ -62,19 +63,19 @@ Remember, don't worry about styling to begin with.
 Let's add our `styles.css` and `app.js` files to our `index.html` file:
 
 ```html
-    <link rel="stylesheet" href="the path to your style.css file">
-    <script src="the path to your Javascript file" async defer></script>
+    <link rel="stylesheet" href="the path to your styles.css file">
+    <script src="the path to your Javascript file" defer></script>
 ```
 
-To open the `index.html` file in the browser by running the following command:
+To open the `index.html` file in the browser, right-click `index.html` in VS Code and choose **Open with Live Server** (or run `python3 -m http.server` in this folder and go to [http://localhost:8000](http://localhost:8000)). On a Mac, outside the devcontainer, you can also run:
 
 `$ open index.html`
 
 As we add new elements and tags you can refresh your browser and it will reload your Guessing Game app and it will also automatically run your Javascript file and import your CSS styling.
 
-To ensure our Javascript file has loaded with our HTML open up the Chrome Developer Tools and click on the "Console" tab to see the `HELLO PAPA PLATOON!` console log.
+To ensure our Javascript file has loaded with our HTML open up the Chrome Developer Tools and click on the "Console" tab to see the `HELLO CODE PLATOON!` console log.
 
-Shortcut to open the Chrome Dev Tools: `command + option + i`
+Shortcut to open the Chrome Dev Tools: `command + option + i` (Mac) or `Ctrl + Shift + i` (Windows/Linux)
 
 ## Step 2: HTML File - Create the required HTML Elements
 First, create the HTML elements needed to `<input>` a value and a `<button>` to submit your answer.
@@ -87,9 +88,11 @@ __Think about how you would execute a Javascript function within an HTML element
 Let's create a function that generates a random number between 1 - 100 and store it in a variable.
 
 ```js
-let randomNumber = someFunction() {
+function someFunction() {
 
 }
+
+let randomNumber = someFunction()
 ```
 
 Using the `document`s built in methods 'grab' the user's input number from the `<input>` element when the `<button>` is pressed and assign it to a variable.
